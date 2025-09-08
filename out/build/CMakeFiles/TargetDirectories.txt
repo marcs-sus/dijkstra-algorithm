@@ -1,0 +1,3 @@
+/home/marcos/Projects/CPlusPlus-Projects/dijkstra-algorithm/out/build/CMakeFiles/dijkstra.dir
+/home/marcos/Projects/CPlusPlus-Projects/dijkstra-algorithm/out/build/CMakeFiles/edit_cache.dir
+/home/marcos/Projects/CPlusPlus-Projects/dijkstra-algorithm/out/build/CMakeFiles/rebuild_cache.dir
