@@ -1,1 +1,0 @@
-/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/dijkstra.dir/link.d CMakeFiles/dijkstra.dir/src/main.cpp.o -o dijkstra

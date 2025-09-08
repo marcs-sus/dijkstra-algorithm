@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/marcos/Projects/CPlusPlus-Projects/dijkstra-algorithm/out/build",
-  "command": "/usr/bin/g++  -I/home/marcos/Projects/CPlusPlus-Projects/dijkstra-algorithm/include -g -std=gnu++17 -o CMakeFiles/dijkstra.dir/src/main.cpp.o -c /home/marcos/Projects/CPlusPlus-Projects/dijkstra-algorithm/src/main.cpp",
-  "file": "/home/marcos/Projects/CPlusPlus-Projects/dijkstra-algorithm/src/main.cpp",
-  "output": "CMakeFiles/dijkstra.dir/src/main.cpp.o"
-}
-]
