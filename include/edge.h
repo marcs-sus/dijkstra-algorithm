@@ -1,28 +1,28 @@
 #pragma once
-#define EDGE_H
 
 #include <string>
-#include "node.h"
 
-class Edge
-{
+class Node;
+
+class Edge {
 public:
-    Edge(Node &rSrc, Node &rDst);
+    Edge(Node& rSrc, Node& rDst);
 
-    Edge(const Edge &other) : Edge(other.srcNode, other.dstNode) {};
+    Edge(const Edge& other) = default;
+    virtual ~Edge() = default;
 
-    virtual ~Edge() {};
-
-    bool isConnectedTo(const Node &node) const;
-
+    bool isConnectedTo(const Node& node) const;
     std::string toString() const;
 
     virtual double getWeight() const = 0;
 
-    Node &getSrcNode() { return srcNode; };
-    Node &getDstNode() { return dstNode; };
+    const Node* getSrcNode() const { return srcNode; };
+    const Node* getDstNode() const { return dstNode; };
+
+    Node* getSrcNode() { return srcNode; };
+    Node* getDstNode() { return dstNode; };
 
 private:
-    Node &srcNode;
-    Node &dstNode;
+    Node* srcNode;
+    Node* dstNode;
 };

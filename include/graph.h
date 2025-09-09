@@ -1,5 +1,4 @@
 #pragma once
-#define NODE_H
 
 #include <list>
 #include <string>
@@ -16,79 +15,29 @@
 class Graph
 {
 private:
-    struct SortNodeById
+    struct SortNodePtrById
     {
-        bool operator()(const Node *l, const Node *r) const
-        {
-            return l->getId() < r->getId();
-        }
+        using is_transparent = void;
+        bool operator()(const std::unique_ptr<Node> &l, const std::unique_ptr<Node> &r) const { return l->getId() < r->getId(); }
+        bool operator()(const std::unique_ptr<Node> &l, const std::string &r_id) const { return l->getId() < r_id; }
+        bool operator()(const std::string &l_id, const std::unique_ptr<Node> &r) const { return l_id < r->getId(); }
     };
 
-    typedef std::set<Node *, SortNodeById> tNodePtrSet;
-    typedef std::list<Edge *> tEdgePtrList;
-    typedef std::deque<Edge *> tPath;
-    typedef std::vector<Edge *> tEdges;
-    typedef std::vector<Node *> tNodes;
-
-    struct DijkstraInfo
-    {
-        double distance;
-        Node *prevNode;
-        Edge *prevEdge;
-    };
-
-    typedef std::map<Node *, DijkstraInfo> tDijkstraMap;
+    // Type aliases
+    using tNodePtrSet = std::set<std::unique_ptr<Node>, SortNodePtrById>;
+    using tEdgePtrList = std::list<std::unique_ptr<Edge>>;
+    using tPath = std::deque<Edge *>;
 
 public:
-    class Exception;
-    class NodeCreationException;
-    class InvalidNodeException;
-    class NotFoundException;
-
-    virtual ~Graph();
-
-    template <class T>
-    T &makeNode(T &node);
+    virtual ~Graph() = default;
 
     template <class T, class... Args>
-    T &makeNode(Args &&...args) { return makeNode(T(std::forward<Args>)) };
-
-    template <class T>
-    T &makeEdge(T &edge);
+    T &makeNode(Args &&...args);
 
     template <class T, class... Args>
-    T &makeEdge(Args &&...args) { return makeEdge(T(std::forward<Args>(args)...)); }
+    T &makeEdge(Args &&...args);
 
-    template <class T, class... Args>
-    void makeBiEdge(Node &n1, Node &n2, Args &&...args)
-    {
-        makeEdge(T(n1, n2, std::forward<Args>(args)...));
-        makeEdge(T(n2, n1, std::forward<Args>(args)...));
-    }
-
-    template <class T>
-    Graph &operator<<(T &&edge)
-    {
-        makeEdge(std::move(edge)) return *this;
-    }
-
-    tNodePtrSet &getNode() { return nodes; }
-
-    bool remove(const Edge &edge);
-
-    bool remove(const Node &node);
-
-    Node *Graph::findNodeById(const std::string &id);
-
-    tEdges findEdges(const Node &src, const Node &dst);
-
-    tEdges findEdges(const std::string &srcId, const std::string &dstId);
-
-    std::string toString() const;
-
-    void saveAsDot(const std::string &filename) const;
-
-    tDijkstraMap findDistancesDijkstra(const Node &srcNode, const Node *dstNode, Node **foundDst);
+    Node *findNodeById(const std::string &id);
 
     tPath findShortestPathDijkstra(const Node &src, const Node &dst);
 
@@ -97,63 +46,40 @@ protected:
     tEdgePtrList edges;
 };
 
-class Graph::Exception
+// Template implementations
+template <class T, class... Args>
+T &Graph::makeNode(Args &&...args)
 {
-public:
-    Exception(const std::string &what) : what(what) {}
-    virtual ~Exception() {}
-    const std::string &what() const { return what; }
+    auto newNode = std::make_unique<T>(std::forward<Args>(args)...);
 
-private:
-    std::string what;
-};
-
-class Graph::NodeCreationException : public Graph::Exception
-{
-public:
-    NodeCreationException(const std::string &what) : Exception(what) {}
-};
-
-class Graph::InvalidNodeException : public Graph::Exception
-{
-public:
-    InvalidNodeException(const std::string &what) : Exception(what) {}
-};
-
-class Graph::NotFoundException : public Graph::Exception
-{
-public:
-    NotFoundException(const std::string &what) : Exception(what) {}
-};
-
-template <class T>
-T &Graph::makeNode(T &&node)
-{
-    auto it = m_nodes.lower_bound(&node);
-    if (it != m_nodes.end() && (*it)->getId() == node.getId())
+    // Check if a node with the same ID already exists
+    auto it = nodes.find(newNode->getId());
+    if (it != nodes.end())
     {
-        throw NodeCreationException("NodeID is not unique: " + node.getId());
+        throw NodeCreationException("NodeID is not unique: " + newNode->getId());
     }
 
-    auto ret = m_nodes.insert(it, new T(std::move(node)));
+    // Move pointer ownership to the set
+    auto result = nodes.insert(std::move(newNode));
 
-    return **ret;
+    // Return the reference to the newly created node
+    return static_cast<T &>(**result.first);
 }
 
-template <class T>
-T &Graph::makeEdge(T &&edge)
+template <class T, class... Args>
+T &Graph::makeEdge(Args &&...args)
 {
-    if (std::find(m_nodes.begin(), m_nodes.end(), &edge.getDstNode()) == m_nodes.end())
+    auto newEdge = std::make_unique<T>(std::forward<Args>(args)...);
+
+    if (!findNodeById(newEdge->getSrcNode()->getId()))
     {
         throw InvalidNodeException("source node is not in the graph");
     }
-
-    if (std::find(m_nodes.begin(), m_nodes.end(), &edge.getSrcNode()) == m_nodes.end())
+    if (!findNodeById(newEdge->getDstNode()->getId()))
     {
         throw InvalidNodeException("destination node is not in the graph");
     }
 
-    T *newEdge = new T(std::move(edge));
-    m_edges.push_back(newEdge);
-    return *newEdge;
+    edges.push_back(std::move(newEdge));
+    return static_cast<T &>(*edges.back());
 }
