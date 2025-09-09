@@ -1,4 +1,4 @@
-# Dijkstra's Algorithm in PHP
+# Dijkstra's Algorithm in C++
 
 ## Overview
 This project implements Dijkstra's algorithm in C++ to find the shortest path between nodes in a weighted graph. The algorithm calculates the minimum distance from a starting node to all other nodes in the graph.
