@@ -1,0 +1,412 @@
+{
+  "arestas": [
+    {
+      "id": "L1",
+      "origem": "Rio do Sul",
+      "destino": "Ituporanga",
+      "distancia": 84,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L2",
+      "origem": "Rio do Sul",
+      "destino": "Rio do Campo",
+      "distancia": 10,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L3",
+      "origem": "Rio do Sul",
+      "destino": "Lontras",
+      "distancia": 66,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L4",
+      "origem": "Rio do Sul",
+      "destino": "Presidente Nereu",
+      "distancia": 6,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L5",
+      "origem": "Rio do Sul",
+      "destino": "Braço do Trombudo",
+      "distancia": 21,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L6",
+      "origem": "Trombudo Central",
+      "destino": "Rio do Sul",
+      "distancia": 89,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L7",
+      "origem": "Laurentino",
+      "destino": "Rio do Sul",
+      "distancia": 30,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L8",
+      "origem": "Agronômica",
+      "destino": "Rio do Sul",
+      "distancia": 69,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L9",
+      "origem": "Atalanta",
+      "destino": "Vitor Meireles",
+      "distancia": 39,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L10",
+      "origem": "Agrolândia",
+      "destino": "Salete",
+      "distancia": 2,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L11",
+      "origem": "Laurentino",
+      "destino": "Santa Terezinha",
+      "distancia": 25,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L12",
+      "origem": "Laurentino",
+      "destino": "Rio do Campo",
+      "distancia": 58,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L13",
+      "origem": "Agronômica",
+      "destino": "Rio do Campo",
+      "distancia": 92,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L14",
+      "origem": "Agronômica",
+      "destino": "Pouso Redondo",
+      "distancia": 41,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L15",
+      "origem": "Lontras",
+      "destino": "Santa Terezinha",
+      "distancia": 23,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L16",
+      "origem": "Braço do Trombudo",
+      "destino": "Pouso Redondo",
+      "distancia": 23,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L17",
+      "origem": "Presidente Nereu",
+      "destino": "Imbuia",
+      "distancia": 72,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L18",
+      "origem": "Trombudo Central",
+      "destino": "Aurora",
+      "distancia": 32,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L19",
+      "origem": "Imbuia",
+      "destino": "Ituporanga",
+      "distancia": 81,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L20",
+      "origem": "Aurora",
+      "destino": "Ituporanga",
+      "distancia": 65,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L21",
+      "origem": "Santa Terezinha",
+      "destino": "Rio do Campo",
+      "distancia": 49,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L22",
+      "origem": "Rio do Campo",
+      "destino": "Pouso Redondo",
+      "distancia": 18,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L23",
+      "origem": "Vitor Meireles",
+      "destino": "Santa Terezinha",
+      "distancia": 35,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L24",
+      "origem": "Dona Ema",
+      "destino": "Rio do Campo",
+      "distancia": 4,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L25",
+      "origem": "Rio do Oeste",
+      "destino": "Pouso Redondo",
+      "distancia": 93,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L26",
+      "origem": "Pouso Redondo",
+      "destino": "Salete",
+      "distancia": 81,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L27",
+      "origem": "Imbuia",
+      "destino": "Witmarsum",
+      "distancia": 21,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L28",
+      "origem": "Aurora",
+      "destino": "Taió",
+      "distancia": 75,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L29",
+      "origem": "José Boiteux",
+      "destino": "Vitor Meireles",
+      "distancia": 31,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L30",
+      "origem": "Lontras",
+      "destino": "José Boiteux",
+      "distancia": 8,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L31",
+      "origem": "Braço do Trombudo",
+      "destino": "Ibirama",
+      "distancia": 12,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L32",
+      "origem": "Ibirama",
+      "destino": "Salete",
+      "distancia": 61,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L33",
+      "origem": "José Boiteux",
+      "destino": "Presidente Getúlio",
+      "distancia": 45,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L34",
+      "origem": "Presidente Nereu",
+      "destino": "José Boiteux",
+      "distancia": 31,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L35",
+      "origem": "Trombudo Central",
+      "destino": "Ibirama",
+      "distancia": 61,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L36",
+      "origem": "Mirim Doce",
+      "destino": "Ibirama",
+      "distancia": 14,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L37",
+      "origem": "Presidente Getúlio",
+      "destino": "Petrolândia",
+      "distancia": 93,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L38",
+      "origem": "Petrolândia",
+      "destino": "Witmarsum",
+      "distancia": 73,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L39",
+      "origem": "Vidal Ramos",
+      "destino": "Taió",
+      "distancia": 89,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L40",
+      "origem": "Mirim Doce",
+      "destino": "Vidal Ramos",
+      "distancia": 54,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L41",
+      "origem": "Imbuia",
+      "destino": "Petrolândia",
+      "distancia": 55,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L42",
+      "origem": "Aurora",
+      "destino": "Vidal Ramos",
+      "distancia": 34,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L43",
+      "origem": "Petrolândia",
+      "destino": "Chapadão do Lageado",
+      "distancia": 10,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L44",
+      "origem": "Vidal Ramos",
+      "destino": "Vidal Ramos",
+      "distancia": 16,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L45",
+      "origem": "Chapadão do Lageado",
+      "destino": "Ituporanga",
+      "distancia": 16,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "OTIMO"
+    },
+    {
+      "id": "L46",
+      "origem": "José Boiteux",
+      "destino": "Dona Ema",
+      "distancia": 20,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L47",
+      "origem": "José Boiteux",
+      "destino": "Witmarsum",
+      "distancia": 33,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L48",
+      "origem": "Ibirama",
+      "destino": "Rio do Sul",
+      "distancia": 65,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "RUIM"
+    },
+    {
+      "id": "L49",
+      "origem": "Ibirama",
+      "destino": "Taió",
+      "distancia": 41,
+      "tipo_pavimentacao": "CHAO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L50",
+      "origem": "Atalanta",
+      "destino": "Presidente Getúlio",
+      "distancia": 49,
+      "tipo_pavimentacao": "CALCAMENTO",
+      "estado_pavimentacao": "BOM"
+    },
+    {
+      "id": "L51",
+      "origem": "Agrolândia",
+      "destino": "Mirim Doce",
+      "distancia": 76,
+      "tipo_pavimentacao": "ASFALTO",
+      "estado_pavimentacao": "OTIMO"
+    }
+  ]
+}
