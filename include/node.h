@@ -20,11 +20,9 @@ public:
 
     const std::string &getId() const { return id; }
 
-    // Lists of incoming and outgoing edges
     const std::list<Edge *> &getOutEdges() const { return outEdges; }
     const std::list<Edge *> &getInEdges() const { return inEdges; }
 
-    // Operators for comparison based on ID
     bool operator==(const Node &other) const { return id == other.id; }
     bool operator<(const Node &other) const { return id < other.id; }
 

@@ -8,9 +8,22 @@
 #include <map>
 #include <algorithm>
 #include <memory>
+#include <stdexcept>
 
 #include "node.h"
 #include "edge.h"
+
+class NodeCreationException : public std::runtime_error
+{
+public:
+    explicit NodeCreationException(const std::string &msg) : std::runtime_error(msg) {}
+};
+
+class InvalidNodeException : public std::runtime_error
+{
+public:
+    explicit InvalidNodeException(const std::string &msg) : std::runtime_error(msg) {}
+};
 
 class Graph
 {
@@ -23,7 +36,6 @@ private:
         bool operator()(const std::string &l_id, const std::unique_ptr<Node> &r) const { return l_id < r->getId(); }
     };
 
-    // Type aliases
     using tNodePtrSet = std::set<std::unique_ptr<Node>, SortNodePtrById>;
     using tEdgePtrList = std::list<std::unique_ptr<Edge>>;
     using tPath = std::deque<Edge *>;
@@ -46,23 +58,19 @@ protected:
     tEdgePtrList edges;
 };
 
-// Template implementations
 template <class T, class... Args>
 T &Graph::makeNode(Args &&...args)
 {
     auto newNode = std::make_unique<T>(std::forward<Args>(args)...);
 
-    // Check if a node with the same ID already exists
     auto it = nodes.find(newNode->getId());
     if (it != nodes.end())
     {
         throw NodeCreationException("NodeID is not unique: " + newNode->getId());
     }
 
-    // Move pointer ownership to the set
     auto result = nodes.insert(std::move(newNode));
 
-    // Return the reference to the newly created node
     return static_cast<T &>(**result.first);
 }
 

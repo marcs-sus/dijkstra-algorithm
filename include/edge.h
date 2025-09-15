@@ -4,25 +4,26 @@
 
 class Node;
 
-class Edge {
+class Edge
+{
 public:
-    Edge(Node& rSrc, Node& rDst);
+    Edge(Node &rSrc, Node &rDst);
 
-    Edge(const Edge& other) = default;
-    virtual ~Edge() = default;
+    Edge(const Edge &other) = default;
+    virtual ~Edge();
 
-    bool isConnectedTo(const Node& node) const;
+    bool isConnectedTo(const Node &node) const;
     std::string toString() const;
 
     virtual double getWeight() const = 0;
 
-    const Node* getSrcNode() const { return srcNode; };
-    const Node* getDstNode() const { return dstNode; };
+    const Node *getSrcNode() const { return srcNode; };
+    const Node *getDstNode() const { return dstNode; };
 
-    Node* getSrcNode() { return srcNode; };
-    Node* getDstNode() { return dstNode; };
+    Node *getSrcNode() { return srcNode; };
+    Node *getDstNode() { return dstNode; };
 
 private:
-    Node* srcNode;
-    Node* dstNode;
+    Node *srcNode;
+    Node *dstNode;
 };

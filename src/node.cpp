@@ -1,3 +1,3 @@
-//
-// Created by ariel on 08/09/2025.
-//
+#include "node.h"
+
+Node::Node(std::string id) : id(std::move(id)) {}
