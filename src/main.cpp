@@ -1,64 +1,132 @@
 #include <iostream>
-#include <vector>
+#include <fstream>
+#include <string>
+#include <set>
 #include <iomanip>
+#include <map>
 
-#include "road.h"
-#include "node.h"
+#include "nlohmann/json.hpp"
+
 #include "graph.h"
+#include "node.h"
+#include "road.h"
+
+using json = nlohmann::json;
+
+const std::map<std::string, PavementCondition> stringToCondition = {
+    {"OTIMO", PavementCondition::OTIMO},
+    {"BOM", PavementCondition::BOM},
+    {"RUIM", PavementCondition::RUIM}};
+
+const std::map<std::string, PavementType> stringToType = {
+    {"ASFALTO", PavementType::ASFALTO},
+    {"CALCAMENTO", PavementType::CALCAMENTO},
+    {"CHAO", PavementType::CHAO}};
+
+bool loadGraphFromJson(Graph &graph, const std::string &filename)
+{
+    std::ifstream file(filename);
+    if (!file.is_open())
+    {
+        std::cerr << "Error: Could not open JSON file: " << filename << std::endl;
+        return false;
+    }
+
+    json data;
+    try
+    {
+        file >> data;
+    }
+    catch (json::parse_error &e)
+    {
+        std::cerr << "JSON parse error: " << e.what() << std::endl;
+        return false;
+    }
+
+    std::set<std::string> createdNodes;
+
+    for (const auto &edgeData : data["edges"])
+    {
+        std::string source_id = edgeData["origin"];
+        std::string target_id = edgeData["destination"];
+
+        if (createdNodes.find(source_id) == createdNodes.end())
+        {
+            graph.makeNode<Node>(source_id);
+            createdNodes.insert(source_id);
+        }
+
+        if (createdNodes.find(target_id) == createdNodes.end())
+        {
+            graph.makeNode<Node>(target_id);
+            createdNodes.insert(target_id);
+        }
+
+        Node *source_node = graph.findNodeById(source_id);
+        Node *target_node = graph.findNodeById(target_id);
+
+        double distance = edgeData["distance"];
+        PavementCondition condition = stringToCondition.at(edgeData["estado_pavimentacao"]);
+        PavementType type = stringToType.at(edgeData["tipo_pavimentacao"]);
+
+        graph.makeEdge<Road>(*source_node, *target_node, distance, condition, type);
+    }
+
+    return true;
+}
 
 int main()
 {
-    Graph g;
+    Graph graph;
 
     try
     {
-        Node &cidadeA = g.makeNode<Node>("Cidade A");
-        Node &cidadeB = g.makeNode<Node>("Cidade B");
-        Node &cidadeC = g.makeNode<Node>("Cidade C");
-        Node &cidadeD = g.makeNode<Node>("Cidade D");
-        Node &cidadeE = g.makeNode<Node>("Cidade E");
-
-        g.makeEdge<Road>(cidadeA, cidadeB, 100.0, PavementCondition::OTIMO, PavementType::ASFALTO);
-        g.makeEdge<Road>(cidadeA, cidadeC, 250.0, PavementCondition::RUIM, PavementType::CHAO);
-        g.makeEdge<Road>(cidadeB, cidadeC, 120.0, PavementCondition::BOM, PavementType::CALCAMENTO);
-        g.makeEdge<Road>(cidadeB, cidadeD, 200.0, PavementCondition::OTIMO, PavementType::ASFALTO);
-        g.makeEdge<Road>(cidadeC, cidadeE, 150.0, PavementCondition::BOM, PavementType::ASFALTO);
-        g.makeEdge<Road>(cidadeD, cidadeE, 80.0, PavementCondition::RUIM, PavementType::CHAO);
-
-        Node *origem = g.findNodeById("Cidade A");
-        Node *destino = g.findNodeById("Cidade E");
-
-        if (!origem || !destino)
+        std::cout << "Loading graph from 'unity_test.json'..." << std::endl;
+        if (!loadGraphFromJson(graph, "graphs/unity_test.json"))
         {
-            std::cerr << "Erro: Nó de origem ou destino não encontrado." << std::endl;
+            return 1;
+        }
+        std::cout << "Graph loaded successfully!" << std::endl;
+
+        std::string sourceNode, targetNode;
+        std::cout << "Enter the source node: ";
+        std::getline(std::cin, sourceNode);
+        std::cout << "Enter the target node: ";
+        std::getline(std::cin, targetNode);
+
+        Node *source = graph.findNodeById(sourceNode);
+        Node *target = graph.findNodeById(targetNode);
+
+        if (!source || !target)
+        {
+            std::cerr << "Error: Source or target node not found." << std::endl;
             return 1;
         }
 
-        std::cout << "Calculando o caminho mais curto de " << origem->getId() << " para " << destino->getId() << "..." << std::endl;
-
-        auto path = g.findShortestPathDijkstra(*origem, *destino);
+        std::cout << "\nCalculating the shortest path from " << source->getId() << " to " << target->getId() << "..." << std::endl;
+        auto path = graph.findShortestPathDijkstra(*source, *target);
 
         if (path.empty())
         {
-            std::cout << "Nenhum caminho encontrado." << std::endl;
+            std::cout << "No path found." << std::endl;
         }
         else
         {
             double totalCost = 0.0;
-            std::cout << "Caminho encontrado:" << std::endl;
+            std::cout << "Path found:" << std::endl;
             for (Edge *edge : path)
             {
                 std::cout << "  - " << edge->getSrcNode()->getId()
                           << " -> " << edge->getDstNode()->getId()
-                          << " (Custo: " << std::fixed << std::setprecision(2) << edge->getWeight() << ")" << std::endl;
+                          << " (Cost: " << std::fixed << std::setprecision(2) << edge->getWeight() << ")" << std::endl;
                 totalCost += edge->getWeight();
             }
-            std::cout << "Custo total do caminho: " << std::fixed << std::setprecision(2) << totalCost << std::endl;
+            std::cout << "Total path cost: " << std::fixed << std::setprecision(2) << totalCost << std::endl;
         }
     }
     catch (const std::exception &e)
     {
-        std::cerr << "Ocorreu uma exceção: " << e.what() << '\n';
+        std::cerr << "An exception occurred: " << e.what() << '\n';
         return 1;
     }
 

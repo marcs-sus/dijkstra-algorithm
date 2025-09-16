@@ -13,3 +13,8 @@ file(GLOB SOURCES "src/*.cpp")
 
 # Add executable
 add_executable(dijkstra ${SOURCES})
+
+# Copy the graphs directory
+add_custom_command(TARGET dijkstra POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/graphs $<TARGET_FILE_DIR:dijkstra>/graphs)
