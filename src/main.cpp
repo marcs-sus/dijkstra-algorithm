@@ -4,6 +4,9 @@
 #include <set>
 #include <iomanip>
 #include <map>
+#include <dirent.h>
+#include <vector>
+#include <dirent.h>
 
 #include "nlohmann/json.hpp"
 
@@ -81,8 +84,57 @@ int main()
 
     try
     {
-        std::cout << "Loading graph from 'unity_test.json'..." << std::endl;
-        if (!loadGraphFromJson(graph, "graphs/unity_test.json"))
+        std::vector<std::string> jsonFiles;
+        std::string graphsDir = "graphs";
+        DIR *dir = opendir(graphsDir.c_str());
+        if (dir)
+        {
+            struct dirent *entry;
+            while ((entry = readdir(dir)) != nullptr)
+            {
+                std::string fname = entry->d_name;
+                if (fname.size() > 5 && fname.substr(fname.size() - 5) == ".json")
+                {
+                    jsonFiles.push_back(fname);
+                }
+            }
+            closedir(dir);
+        }
+
+        if (jsonFiles.empty())
+        {
+            std::cerr << "No JSON files found in 'graphs' directory." << std::endl;
+            return 1;
+        }
+
+        std::cout << "Available graph files:" << std::endl;
+        for (size_t i = 0; i < jsonFiles.size(); ++i)
+        {
+            std::cout << "  [" << (i + 1) << "] " << jsonFiles[i] << std::endl;
+        }
+
+        size_t fileChoice = 0;
+        while (true)
+        {
+            std::cout << "Select a graph file by number: ";
+            std::string input;
+            std::getline(std::cin, input);
+            try
+            {
+                fileChoice = std::stoul(input);
+            }
+            catch (...)
+            {
+                fileChoice = 0;
+            }
+            if (fileChoice >= 1 && fileChoice <= jsonFiles.size())
+                break;
+            std::cout << "Invalid selection. Please try again." << std::endl;
+        }
+
+        std::string selectedFile = graphsDir + "/" + jsonFiles[fileChoice - 1];
+        std::cout << "Loading graph from '" << selectedFile << "'..." << std::endl;
+        if (!loadGraphFromJson(graph, selectedFile))
         {
             return 1;
         }

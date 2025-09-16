@@ -1,0 +1,22 @@
+{
+  "edges": [
+    {
+      "id": "E1",
+      "origin": "A",
+      "destination": "B",
+      "distance": 5
+    },
+    {
+      "id": "E2",
+      "origin": "B",
+      "destination": "C",
+      "distance": 3
+    },
+    {
+      "id": "E3",
+      "origin": "A",
+      "destination": "C",
+      "distance": 10
+    }
+  ]
+}
