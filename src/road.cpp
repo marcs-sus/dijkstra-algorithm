@@ -1,24 +1,49 @@
 #include "road.h"
 
-const std::map<PavementCondition, double> Road::conditionFactors = {
-    {PavementCondition::OTIMO, 1.00},
-    {PavementCondition::BOM, 1.25},
-    {PavementCondition::RUIM, 1.70}};
-
-const std::map<PavementType, double> Road::typeFactors = {
-    {PavementType::ASFALTO, 1.00},
-    {PavementType::CALCAMENTO, 1.30},
-    {PavementType::CHAO, 1.80}};
-
-Road::Road(Node &rSrc, Node &rDst, double distance, PavementCondition condition, PavementType type)
-    : Edge(rSrc, rDst), distanceKm(distance), condition(condition), type(type)
+Road::Road(Node *src, Node *dst, double distance, PavementCondition condition, PavementType type)
+    : Edge(src, dst, 0.0), distanceKm(distance), condition(condition), type(type)
 {
+    // Calculate and set the weight after initialization
+    weight = distanceKm * getConditionFactor() * getTypeFactor();
 }
 
 double Road::getWeight() const
 {
-    double conditionFactor = conditionFactors.at(condition);
-    double typeFactor = typeFactors.at(type);
+    double conditionFactor = getConditionFactor();
+    double typeFactor = getTypeFactor();
 
+    // Calculate weight as distance * pavement condition * pavement type
     return distanceKm * conditionFactor * typeFactor;
+}
+
+double Road::getConditionFactor() const
+{
+    switch (condition)
+    {
+    case PavementCondition::EXCELLENT:
+        return 1.00;
+    case PavementCondition::GOOD:
+        return 1.25;
+    case PavementCondition::BAD:
+        return 1.70;
+    default:
+        // Default to EXCELLENT if unknown
+        return 1.00;
+    }
+}
+
+double Road::getTypeFactor() const
+{
+    switch (type)
+    {
+    case PavementType::ASPHALT:
+        return 1.00;
+    case PavementType::PAVEMENT:
+        return 1.30;
+    case PavementType::DIRT:
+        return 1.80;
+    default:
+        // Default to ASPHALT if unknown
+        return 1.00;
+    }
 }

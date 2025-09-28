@@ -1,36 +1,38 @@
 #pragma once
 
 #include <string>
-#include <list>
+#include <vector>
 
 class Edge;
 
+// Node class representing a graph node
 class Node
 {
 public:
-    friend class Edge;
-    friend class Graph;
+    Node(const std::string &id) : id(id) {}
 
-    Node(std::string id);
-
-    Node(const Node &) = delete;
-    Node &operator=(const Node &) = delete;
-
-    virtual ~Node() = default;
-
+    // Getter for node ID
     const std::string &getId() const { return id; }
 
-    const std::list<Edge *> &getOutEdges() const { return outEdges; }
-    const std::list<Edge *> &getInEdges() const { return inEdges; }
+    // Getters for incoming and outgoing edges - using simple vectors instead of lists
+    const std::vector<Edge *> &getOutEdges() const { return outEdges; }
+    const std::vector<Edge *> &getInEdges() const { return inEdges; }
 
+    // Methods to manage edges
+    void addOutEdge(Edge *edge);
+    void addInEdge(Edge *edge);
+    void removeOutEdge(Edge *edge);
+    void removeInEdge(Edge *edge);
+
+    // Comparison operators
     bool operator==(const Node &other) const { return id == other.id; }
     bool operator<(const Node &other) const { return id < other.id; }
 
 private:
-    std::list<Edge *> &getOutEdges() { return outEdges; }
-    std::list<Edge *> &getInEdges() { return inEdges; }
-
+    // Node unique identifier
     std::string id;
-    std::list<Edge *> outEdges;
-    std::list<Edge *> inEdges;
+
+    // Simple vectors instead of lists for edges
+    std::vector<Edge *> outEdges;
+    std::vector<Edge *> inEdges;
 };

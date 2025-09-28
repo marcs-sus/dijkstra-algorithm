@@ -1,12 +1,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <set>
 #include <iomanip>
 #include <map>
 #include <dirent.h>
 #include <vector>
-#include <dirent.h>
 
 #include "nlohmann/json.hpp"
 
@@ -17,14 +15,20 @@
 using json = nlohmann::json;
 
 const std::map<std::string, PavementCondition> stringToCondition = {
-    {"OTIMO", PavementCondition::OTIMO},
-    {"BOM", PavementCondition::BOM},
-    {"RUIM", PavementCondition::RUIM}};
+    {"EXCELLENT", PavementCondition::EXCELLENT},
+    {"GOOD", PavementCondition::GOOD},
+    {"BAD", PavementCondition::BAD},
+    {"OTIMO", PavementCondition::EXCELLENT},
+    {"BOM", PavementCondition::GOOD},
+    {"RUIM", PavementCondition::BAD}};
 
 const std::map<std::string, PavementType> stringToType = {
-    {"ASFALTO", PavementType::ASFALTO},
-    {"CALCAMENTO", PavementType::CALCAMENTO},
-    {"CHAO", PavementType::CHAO}};
+    {"ASPHALT", PavementType::ASPHALT},
+    {"PAVEMENT", PavementType::PAVEMENT},
+    {"DIRT", PavementType::DIRT},
+    {"ASFALTO", PavementType::ASPHALT},
+    {"CALCAMENTO", PavementType::PAVEMENT},
+    {"CHAO", PavementType::DIRT}};
 
 bool loadGraphFromJson(Graph &graph, const std::string &filename)
 {
@@ -46,38 +50,63 @@ bool loadGraphFromJson(Graph &graph, const std::string &filename)
         return false;
     }
 
-    std::set<std::string> createdNodes;
+    // Vector to keep track of created nodes
+    std::vector<std::string> createdNodes;
 
     for (const auto &edgeData : data["edges"])
     {
         std::string source_id = edgeData["origin"];
         std::string target_id = edgeData["destination"];
 
-        if (createdNodes.find(source_id) == createdNodes.end())
+        // Check if source node already exists
+        bool sourceExists = false;
+        for (const std::string &nodeId : createdNodes)
         {
-            graph.makeNode<Node>(source_id);
-            createdNodes.insert(source_id);
+            if (nodeId == source_id)
+            {
+                sourceExists = true;
+                break;
+            }
         }
 
-        if (createdNodes.find(target_id) == createdNodes.end())
+        if (!sourceExists)
         {
-            graph.makeNode<Node>(target_id);
-            createdNodes.insert(target_id);
+            graph.createNode(source_id);
+            createdNodes.push_back(source_id);
+        }
+
+        // Check if target node already exists
+        bool targetExists = false;
+        for (const std::string &nodeId : createdNodes)
+        {
+            if (nodeId == target_id)
+            {
+                targetExists = true;
+                break;
+            }
+        }
+
+        if (!targetExists)
+        {
+            graph.createNode(target_id);
+            createdNodes.push_back(target_id);
         }
 
         Node *source_node = graph.findNodeById(source_id);
         Node *target_node = graph.findNodeById(target_id);
 
         double distance = edgeData["distance"];
-        PavementCondition condition = stringToCondition.at(edgeData["estado_pavimentacao"]);
-        PavementType type = stringToType.at(edgeData["tipo_pavimentacao"]);
+        PavementCondition condition = stringToCondition.at(edgeData["pavement_condition"]);
+        PavementType type = stringToType.at(edgeData["pavement_type"]);
 
-        graph.makeEdge<Road>(*source_node, *target_node, distance, condition, type);
+        // Create Road edge using the specialized method
+        graph.createRoad(source_node, target_node, distance, condition, type);
     }
 
     return true;
 }
 
+// Main function
 int main()
 {
     Graph graph;
@@ -156,7 +185,9 @@ int main()
         }
 
         std::cout << "\nCalculating the shortest path from " << source->getId() << " to " << target->getId() << "..." << std::endl;
-        auto path = graph.findShortestPathDijkstra(*source, *target);
+
+        // Call method to find the shortest path using Dijkstra's algorithm
+        std::deque<Edge *> path = graph.findShortestPathDijkstra(*source, *target);
 
         if (path.empty())
         {
@@ -166,6 +197,8 @@ int main()
         {
             double totalCost = 0.0;
             std::cout << "Path found:" << std::endl;
+
+            // Display the path
             for (Edge *edge : path)
             {
                 std::cout << "  - " << edge->getSrcNode()->getId()

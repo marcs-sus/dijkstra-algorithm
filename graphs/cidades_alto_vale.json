@@ -5,408 +5,408 @@
       "origin": "Rio do Sul",
       "destination": "Ituporanga",
       "distance": 84,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "CHAO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L2",
       "origin": "Rio do Sul",
       "destination": "Rio do Campo",
       "distance": 10,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L3",
       "origin": "Rio do Sul",
       "destination": "Lontras",
       "distance": 66,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L4",
       "origin": "Rio do Sul",
       "destination": "Presidente Nereu",
       "distance": 6,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "CHAO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L5",
       "origin": "Rio do Sul",
       "destination": "Braço do Trombudo",
       "distance": 21,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CHAO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L6",
       "origin": "Trombudo Central",
       "destination": "Rio do Sul",
       "distance": 89,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L7",
       "origin": "Laurentino",
       "destination": "Rio do Sul",
       "distance": 30,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L8",
       "origin": "Agronômica",
       "destination": "Rio do Sul",
       "distance": 69,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L9",
       "origin": "Atalanta",
       "destination": "Vitor Meireles",
       "distance": 39,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "CHAO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L10",
       "origin": "Agrolândia",
       "destination": "Salete",
       "distance": 2,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L11",
       "origin": "Laurentino",
       "destination": "Santa Terezinha",
       "distance": 25,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L12",
       "origin": "Laurentino",
       "destination": "Rio do Campo",
       "distance": 58,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L13",
       "origin": "Agronômica",
       "destination": "Rio do Campo",
       "distance": 92,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "CHAO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L14",
       "origin": "Agronômica",
       "destination": "Pouso Redondo",
       "distance": 41,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L15",
       "origin": "Lontras",
       "destination": "Santa Terezinha",
       "distance": 23,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L16",
       "origin": "Braço do Trombudo",
       "destination": "Pouso Redondo",
       "distance": 23,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "CHAO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L17",
       "origin": "Presidente Nereu",
       "destination": "Imbuia",
       "distance": 72,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "CHAO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L18",
       "origin": "Trombudo Central",
       "destination": "Aurora",
       "distance": 32,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L19",
       "origin": "Imbuia",
       "destination": "Ituporanga",
       "distance": 81,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L20",
       "origin": "Aurora",
       "destination": "Ituporanga",
       "distance": 65,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L21",
       "origin": "Santa Terezinha",
       "destination": "Rio do Campo",
       "distance": 49,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "CHAO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L22",
       "origin": "Rio do Campo",
       "destination": "Pouso Redondo",
       "distance": 18,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L23",
       "origin": "Vitor Meireles",
       "destination": "Santa Terezinha",
       "distance": 35,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L24",
       "origin": "Dona Ema",
       "destination": "Rio do Campo",
       "distance": 4,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L25",
       "origin": "Rio do Oeste",
       "destination": "Pouso Redondo",
       "distance": 93,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "CHAO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L26",
       "origin": "Pouso Redondo",
       "destination": "Salete",
       "distance": 81,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L27",
       "origin": "Imbuia",
       "destination": "Witmarsum",
       "distance": 21,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L28",
       "origin": "Aurora",
       "destination": "Taió",
       "distance": 75,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CHAO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L29",
       "origin": "José Boiteux",
       "destination": "Vitor Meireles",
       "distance": 31,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "CHAO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L30",
       "origin": "Lontras",
       "destination": "José Boiteux",
       "distance": 8,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L31",
       "origin": "Braço do Trombudo",
       "destination": "Ibirama",
       "distance": 12,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L32",
       "origin": "Ibirama",
       "destination": "Salete",
       "distance": 61,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L33",
       "origin": "José Boiteux",
       "destination": "Presidente Getúlio",
       "distance": 45,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CHAO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L34",
       "origin": "Presidente Nereu",
       "destination": "José Boiteux",
       "distance": 31,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L35",
       "origin": "Trombudo Central",
       "destination": "Ibirama",
       "distance": 61,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L36",
       "origin": "Mirim Doce",
       "destination": "Ibirama",
       "distance": 14,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L37",
       "origin": "Presidente Getúlio",
       "destination": "Petrolândia",
       "distance": 93,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CHAO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L38",
       "origin": "Petrolândia",
       "destination": "Witmarsum",
       "distance": 73,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L39",
       "origin": "Vidal Ramos",
       "destination": "Taió",
       "distance": 89,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L40",
       "origin": "Mirim Doce",
       "destination": "Vidal Ramos",
       "distance": 54,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "CHAO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L41",
       "origin": "Imbuia",
       "destination": "Petrolândia",
       "distance": 55,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CHAO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L42",
       "origin": "Aurora",
       "destination": "Vidal Ramos",
       "distance": 34,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L43",
       "origin": "Petrolândia",
       "destination": "Chapadão do Lageado",
       "distance": 10,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L44",
       "origin": "Vidal Ramos",
       "destination": "Vidal Ramos",
       "distance": 16,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L45",
       "origin": "Chapadão do Lageado",
       "destination": "Ituporanga",
       "distance": 16,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "CHAO",
+      "pavement_condition": "OTIMO"
     },
     {
       "id": "L46",
       "origin": "José Boiteux",
       "destination": "Dona Ema",
       "distance": 20,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L47",
       "origin": "José Boiteux",
       "destination": "Witmarsum",
       "distance": 33,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L48",
       "origin": "Ibirama",
       "destination": "Rio do Sul",
       "distance": 65,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "RUIM"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "RUIM"
     },
     {
       "id": "L49",
       "origin": "Ibirama",
       "destination": "Taió",
       "distance": 41,
-      "tipo_pavimentacao": "CHAO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "CHAO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L50",
       "origin": "Atalanta",
       "destination": "Presidente Getúlio",
       "distance": 49,
-      "tipo_pavimentacao": "CALCAMENTO",
-      "estado_pavimentacao": "BOM"
+      "pavement_type": "CALCAMENTO",
+      "pavement_condition": "BOM"
     },
     {
       "id": "L51",
       "origin": "Agrolândia",
       "destination": "Mirim Doce",
       "distance": 76,
-      "tipo_pavimentacao": "ASFALTO",
-      "estado_pavimentacao": "OTIMO"
+      "pavement_type": "ASFALTO",
+      "pavement_condition": "OTIMO"
     }
   ]
 }

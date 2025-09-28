@@ -4,26 +4,36 @@
 
 class Node;
 
+// Edge class representing a connection between two nodes
 class Edge
 {
 public:
-    Edge(Node &rSrc, Node &rDst);
-
-    Edge(const Edge &other) = default;
+    Edge(Node *src, Node *dst, double weight = 0.0);
     virtual ~Edge();
 
-    bool isConnectedTo(const Node &node) const;
+    // Check if the edge is connected to a given node
+    bool isConnectedTo(const Node *node) const;
+
+    // Virtual method to get the weight of the edge
+    virtual double getWeight() const { return weight; }
+
+    // Const getters for source and destination nodes
+    const Node *getSrcNode() const { return srcNode; }
+    const Node *getDstNode() const { return dstNode; }
+
+    // Non-const getters (needed for some operations)
+    Node *getSrcNode() { return srcNode; }
+    Node *getDstNode() { return dstNode; }
+
+    // String representation of the edge
     std::string toString() const;
 
-    virtual double getWeight() const = 0;
-
-    const Node *getSrcNode() const { return srcNode; };
-    const Node *getDstNode() const { return dstNode; };
-
-    Node *getSrcNode() { return srcNode; };
-    Node *getDstNode() { return dstNode; };
+protected:
+    // Protected so derived classes can access it
+    double weight;
 
 private:
+    // Pointers to the source and destination nodes
     Node *srcNode;
     Node *dstNode;
 };

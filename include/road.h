@@ -2,34 +2,41 @@
 
 #include "edge.h"
 
-#include <map>
-
+// Enums for pavement condition and type
 enum class PavementCondition
 {
-    OTIMO,
-    BOM,
-    RUIM
+    EXCELLENT,
+    GOOD,
+    BAD
 };
 
 enum class PavementType
 {
-    ASFALTO,
-    CALCAMENTO,
-    CHAO
+    ASPHALT,
+    PAVEMENT,
+    DIRT
 };
 
+// Road class representing a custom edge for specific graphs
 class Road : public Edge
 {
 public:
-    Road(Node &rSrc, Node &rDst, double distance, PavementCondition condition, PavementType type);
+    Road(Node *src, Node *dst, double distance, PavementCondition condition, PavementType type);
 
+    // Override getWeight to calculate based on distance, condition, and type
     double getWeight() const override;
+
+    // Getters for road properties
+    double getDistance() const { return distanceKm; }
+    PavementCondition getCondition() const { return condition; }
+    PavementType getType() const { return type; }
 
 private:
     double distanceKm;
     PavementCondition condition;
     PavementType type;
 
-    static const std::map<PavementCondition, double> conditionFactors;
-    static const std::map<PavementType, double> typeFactors;
+    // Helpers to get factors based on enums
+    double getConditionFactor() const;
+    double getTypeFactor() const;
 };
