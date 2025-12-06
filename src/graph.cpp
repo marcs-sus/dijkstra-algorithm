@@ -2,6 +2,7 @@
 #include "road.h"
 
 #include <string>
+#include <limits>
 
 Graph::~Graph()
 {

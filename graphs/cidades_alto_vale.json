@@ -2,7 +2,7 @@
   "edges": [
     {
       "id": "L1",
-      "origin": "Rio do Sul",
+      "origin": "Rio_do_Sul",
       "destination": "Ituporanga",
       "distance": 84,
       "pavement_type": "CHAO",
@@ -10,15 +10,15 @@
     },
     {
       "id": "L2",
-      "origin": "Rio do Sul",
-      "destination": "Rio do Campo",
+      "origin": "Rio_do_Sul",
+      "destination": "Rio_do_Campo",
       "distance": 10,
       "pavement_type": "CALCAMENTO",
       "pavement_condition": "BOM"
     },
     {
       "id": "L3",
-      "origin": "Rio do Sul",
+      "origin": "Rio_do_Sul",
       "destination": "Lontras",
       "distance": 66,
       "pavement_type": "ASFALTO",
@@ -26,24 +26,24 @@
     },
     {
       "id": "L4",
-      "origin": "Rio do Sul",
-      "destination": "Presidente Nereu",
+      "origin": "Rio_do_Sul",
+      "destination": "Presidente_Nereu",
       "distance": 6,
       "pavement_type": "CHAO",
       "pavement_condition": "RUIM"
     },
     {
       "id": "L5",
-      "origin": "Rio do Sul",
-      "destination": "Braço do Trombudo",
+      "origin": "Rio_do_Sul",
+      "destination": "Braco_do_Trombudo",
       "distance": 21,
       "pavement_type": "CHAO",
       "pavement_condition": "OTIMO"
     },
     {
       "id": "L6",
-      "origin": "Trombudo Central",
-      "destination": "Rio do Sul",
+      "origin": "Trombudo_Central",
+      "destination": "Rio_do_Sul",
       "distance": 89,
       "pavement_type": "ASFALTO",
       "pavement_condition": "BOM"
@@ -51,15 +51,15 @@
     {
       "id": "L7",
       "origin": "Laurentino",
-      "destination": "Rio do Sul",
+      "destination": "Rio_do_Sul",
       "distance": 30,
       "pavement_type": "CALCAMENTO",
       "pavement_condition": "OTIMO"
     },
     {
       "id": "L8",
-      "origin": "Agronômica",
-      "destination": "Rio do Sul",
+      "origin": "Agronomica",
+      "destination": "Rio_do_Sul",
       "distance": 69,
       "pavement_type": "ASFALTO",
       "pavement_condition": "BOM"
@@ -67,14 +67,14 @@
     {
       "id": "L9",
       "origin": "Atalanta",
-      "destination": "Vitor Meireles",
+      "destination": "Vitor_Meireles",
       "distance": 39,
       "pavement_type": "CHAO",
       "pavement_condition": "RUIM"
     },
     {
       "id": "L10",
-      "origin": "Agrolândia",
+      "origin": "Agrolandia",
       "destination": "Salete",
       "distance": 2,
       "pavement_type": "CALCAMENTO",
@@ -83,7 +83,7 @@
     {
       "id": "L11",
       "origin": "Laurentino",
-      "destination": "Santa Terezinha",
+      "destination": "Santa_Terezinha",
       "distance": 25,
       "pavement_type": "ASFALTO",
       "pavement_condition": "RUIM"
@@ -91,23 +91,23 @@
     {
       "id": "L12",
       "origin": "Laurentino",
-      "destination": "Rio do Campo",
+      "destination": "Rio_do_Campo",
       "distance": 58,
       "pavement_type": "ASFALTO",
       "pavement_condition": "BOM"
     },
     {
       "id": "L13",
-      "origin": "Agronômica",
-      "destination": "Rio do Campo",
+      "origin": "Agronomica",
+      "destination": "Rio_do_Campo",
       "distance": 92,
       "pavement_type": "CHAO",
       "pavement_condition": "RUIM"
     },
     {
       "id": "L14",
-      "origin": "Agronômica",
-      "destination": "Pouso Redondo",
+      "origin": "Agronomica",
+      "destination": "Pouso_Redondo",
       "distance": 41,
       "pavement_type": "CALCAMENTO",
       "pavement_condition": "OTIMO"
@@ -115,22 +115,22 @@
     {
       "id": "L15",
       "origin": "Lontras",
-      "destination": "Santa Terezinha",
+      "destination": "Santa_Terezinha",
       "distance": 23,
       "pavement_type": "ASFALTO",
       "pavement_condition": "RUIM"
     },
     {
       "id": "L16",
-      "origin": "Braço do Trombudo",
-      "destination": "Pouso Redondo",
+      "origin": "Braco_do_Trombudo",
+      "destination": "Pouso_Redondo",
       "distance": 23,
       "pavement_type": "CHAO",
       "pavement_condition": "RUIM"
     },
     {
       "id": "L17",
-      "origin": "Presidente Nereu",
+      "origin": "Presidente_Nereu",
       "destination": "Imbuia",
       "distance": 72,
       "pavement_type": "CHAO",
@@ -138,7 +138,7 @@
     },
     {
       "id": "L18",
-      "origin": "Trombudo Central",
+      "origin": "Trombudo_Central",
       "destination": "Aurora",
       "distance": 32,
       "pavement_type": "ASFALTO",
@@ -162,47 +162,47 @@
     },
     {
       "id": "L21",
-      "origin": "Santa Terezinha",
-      "destination": "Rio do Campo",
+      "origin": "Santa_Terezinha",
+      "destination": "Rio_do_Campo",
       "distance": 49,
       "pavement_type": "CHAO",
       "pavement_condition": "RUIM"
     },
     {
       "id": "L22",
-      "origin": "Rio do Campo",
-      "destination": "Pouso Redondo",
+      "origin": "Rio_do_Campo",
+      "destination": "Pouso_Redondo",
       "distance": 18,
       "pavement_type": "CALCAMENTO",
       "pavement_condition": "BOM"
     },
     {
       "id": "L23",
-      "origin": "Vitor Meireles",
-      "destination": "Santa Terezinha",
+      "origin": "Vitor_Meireles",
+      "destination": "Santa_Terezinha",
       "distance": 35,
       "pavement_type": "ASFALTO",
       "pavement_condition": "RUIM"
     },
     {
       "id": "L24",
-      "origin": "Dona Ema",
-      "destination": "Rio do Campo",
+      "origin": "Dona_Ema",
+      "destination": "Rio_do_Campo",
       "distance": 4,
       "pavement_type": "ASFALTO",
       "pavement_condition": "BOM"
     },
     {
       "id": "L25",
-      "origin": "Rio do Oeste",
-      "destination": "Pouso Redondo",
+      "origin": "Rio_do_Oeste",
+      "destination": "Pouso_Redondo",
       "distance": 93,
       "pavement_type": "CHAO",
       "pavement_condition": "RUIM"
     },
     {
       "id": "L26",
-      "origin": "Pouso Redondo",
+      "origin": "Pouso_Redondo",
       "destination": "Salete",
       "distance": 81,
       "pavement_type": "CALCAMENTO",
@@ -219,15 +219,15 @@
     {
       "id": "L28",
       "origin": "Aurora",
-      "destination": "Taió",
+      "destination": "Taio",
       "distance": 75,
       "pavement_type": "CHAO",
       "pavement_condition": "OTIMO"
     },
     {
       "id": "L29",
-      "origin": "José Boiteux",
-      "destination": "Vitor Meireles",
+      "origin": "Jose_Boiteux",
+      "destination": "Vitor_Meireles",
       "distance": 31,
       "pavement_type": "CHAO",
       "pavement_condition": "BOM"
@@ -235,14 +235,14 @@
     {
       "id": "L30",
       "origin": "Lontras",
-      "destination": "José Boiteux",
+      "destination": "Jose_Boiteux",
       "distance": 8,
       "pavement_type": "ASFALTO",
       "pavement_condition": "BOM"
     },
     {
       "id": "L31",
-      "origin": "Braço do Trombudo",
+      "origin": "Braco_do_Trombudo",
       "destination": "Ibirama",
       "distance": 12,
       "pavement_type": "CALCAMENTO",
@@ -258,23 +258,23 @@
     },
     {
       "id": "L33",
-      "origin": "José Boiteux",
-      "destination": "Presidente Getúlio",
+      "origin": "Jose_Boiteux",
+      "destination": "Presidente_Getulio",
       "distance": 45,
       "pavement_type": "CHAO",
       "pavement_condition": "OTIMO"
     },
     {
       "id": "L34",
-      "origin": "Presidente Nereu",
-      "destination": "José Boiteux",
+      "origin": "Presidente_Nereu",
+      "destination": "Jose_Boiteux",
       "distance": 31,
       "pavement_type": "CALCAMENTO",
       "pavement_condition": "OTIMO"
     },
     {
       "id": "L35",
-      "origin": "Trombudo Central",
+      "origin": "Trombudo_Central",
       "destination": "Ibirama",
       "distance": 61,
       "pavement_type": "ASFALTO",
@@ -282,7 +282,7 @@
     },
     {
       "id": "L36",
-      "origin": "Mirim Doce",
+      "origin": "Mirim_Doce",
       "destination": "Ibirama",
       "distance": 14,
       "pavement_type": "ASFALTO",
@@ -290,15 +290,15 @@
     },
     {
       "id": "L37",
-      "origin": "Presidente Getúlio",
-      "destination": "Petrolândia",
+      "origin": "Presidente_Getulio",
+      "destination": "Petrolandia",
       "distance": 93,
       "pavement_type": "CHAO",
       "pavement_condition": "OTIMO"
     },
     {
       "id": "L38",
-      "origin": "Petrolândia",
+      "origin": "Petrolandia",
       "destination": "Witmarsum",
       "distance": 73,
       "pavement_type": "CALCAMENTO",
@@ -306,16 +306,16 @@
     },
     {
       "id": "L39",
-      "origin": "Vidal Ramos",
-      "destination": "Taió",
+      "origin": "Vidal_Ramos",
+      "destination": "Taio",
       "distance": 89,
       "pavement_type": "ASFALTO",
       "pavement_condition": "OTIMO"
     },
     {
       "id": "L40",
-      "origin": "Mirim Doce",
-      "destination": "Vidal Ramos",
+      "origin": "Mirim_Doce",
+      "destination": "Vidal_Ramos",
       "distance": 54,
       "pavement_type": "CHAO",
       "pavement_condition": "RUIM"
@@ -323,7 +323,7 @@
     {
       "id": "L41",
       "origin": "Imbuia",
-      "destination": "Petrolândia",
+      "destination": "Petrolandia",
       "distance": 55,
       "pavement_type": "CHAO",
       "pavement_condition": "OTIMO"
@@ -331,30 +331,30 @@
     {
       "id": "L42",
       "origin": "Aurora",
-      "destination": "Vidal Ramos",
+      "destination": "Vidal_Ramos",
       "distance": 34,
       "pavement_type": "ASFALTO",
       "pavement_condition": "BOM"
     },
     {
       "id": "L43",
-      "origin": "Petrolândia",
-      "destination": "Chapadão do Lageado",
+      "origin": "Petrolandia",
+      "destination": "Chapadao_do_Lageado",
       "distance": 10,
       "pavement_type": "CALCAMENTO",
       "pavement_condition": "RUIM"
     },
     {
       "id": "L44",
-      "origin": "Vidal Ramos",
-      "destination": "Vidal Ramos",
+      "origin": "Vidal_Ramos",
+      "destination": "Vidal_Ramos",
       "distance": 16,
       "pavement_type": "ASFALTO",
       "pavement_condition": "OTIMO"
     },
     {
       "id": "L45",
-      "origin": "Chapadão do Lageado",
+      "origin": "Chapadao_do_Lageado",
       "destination": "Ituporanga",
       "distance": 16,
       "pavement_type": "CHAO",
@@ -362,15 +362,15 @@
     },
     {
       "id": "L46",
-      "origin": "José Boiteux",
-      "destination": "Dona Ema",
+      "origin": "Jose_Boiteux",
+      "destination": "Dona_Ema",
       "distance": 20,
       "pavement_type": "CALCAMENTO",
       "pavement_condition": "BOM"
     },
     {
       "id": "L47",
-      "origin": "José Boiteux",
+      "origin": "Jose_Boiteux",
       "destination": "Witmarsum",
       "distance": 33,
       "pavement_type": "ASFALTO",
@@ -379,7 +379,7 @@
     {
       "id": "L48",
       "origin": "Ibirama",
-      "destination": "Rio do Sul",
+      "destination": "Rio_do_Sul",
       "distance": 65,
       "pavement_type": "ASFALTO",
       "pavement_condition": "RUIM"
@@ -387,7 +387,7 @@
     {
       "id": "L49",
       "origin": "Ibirama",
-      "destination": "Taió",
+      "destination": "Taio",
       "distance": 41,
       "pavement_type": "CHAO",
       "pavement_condition": "BOM"
@@ -395,15 +395,15 @@
     {
       "id": "L50",
       "origin": "Atalanta",
-      "destination": "Presidente Getúlio",
+      "destination": "Presidente_Getulio",
       "distance": 49,
       "pavement_type": "CALCAMENTO",
       "pavement_condition": "BOM"
     },
     {
       "id": "L51",
-      "origin": "Agrolândia",
-      "destination": "Mirim Doce",
+      "origin": "Agrolandia",
+      "destination": "Mirim_Doce",
       "distance": 76,
       "pavement_type": "ASFALTO",
       "pavement_condition": "OTIMO"

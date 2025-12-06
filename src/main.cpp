@@ -96,11 +96,15 @@ bool loadGraphFromJson(Graph &graph, const std::string &filename)
         Node *target_node = graph.findNodeById(target_id);
 
         double distance = edgeData["distance"];
+
         PavementCondition condition = stringToCondition.at(edgeData["pavement_condition"]);
         PavementType type = stringToType.at(edgeData["pavement_type"]);
 
-        // Create Road edge using the specialized method
+        // Cria a aresta no sentido original
         graph.createRoad(source_node, target_node, distance, condition, type);
+
+        // Adicione esta linha para criar a aresta no sentido inverso
+        graph.createRoad(target_node, source_node, distance, condition, type);
     }
 
     return true;
